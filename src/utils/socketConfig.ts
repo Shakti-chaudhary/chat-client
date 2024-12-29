@@ -1,7 +1,6 @@
 import { io } from "socket.io-client";
 
-const BASE_URL =
-  import.meta.env.MODE === "development" ? "http://localhost:5505/api" : "/";
+const BASE_URL = "https://chatserverimessage.onrender.com/";
 
 export const initializeSocket = (userId: string) => {
   const socket = io(BASE_URL, {
