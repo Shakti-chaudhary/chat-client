@@ -39,6 +39,7 @@ export const useMessageStore = create<MassageState>((set, get) => ({
     } catch (error) {
       if (error instanceof Error) {
         toast.error(`Error in fetching users..   ${error.message}`);
+        console.log("Error in get users ==>>  ", error);
       }
     } finally {
       set({ isUsersLoading: false });
